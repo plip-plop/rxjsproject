@@ -1,0 +1,20 @@
+<p>app-root works!</p>
+<div class="d-flex">
+  <div class="text-flex">
+    <button (click)="onClick('')">Page d'accueil</button>
+    <button (click)="onClick('test')">Tests</button>
+    <h1>Exemples en code:</h1>
+    <button (click)="onClick('desincription')">Désincription</button>
+    <button (click)="onClick('traitement')">Opérateurs de traitement</button>
+    <button (click)="onClick('exception')">Exceptions</button>
+    <button (click)="onClick('combination')">Combination operators</button>
+    <button (click)="onClick('highorder')">High-Order operators</button>
+    <button (click)="onClick('creation')">Creation operators</button>
+
+    <h1 class="next">Component actuel:</h1>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="text-flex">
+    <app-search-bar></app-search-bar>
+  </div>
+</div>

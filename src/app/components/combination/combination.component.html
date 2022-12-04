@@ -1,0 +1,19 @@
+<p>combination works!</p>
+
+<h2>Output (Zip)</h2>
+<p>Zip stoppe quand l'un des observables complete.</p>
+<div>RESPONSE: {{ responseZip }}</div>
+
+<h2>Output (forkJoin)</h2>
+<div>RESPONSE: {{ responseForkJoin }}</div>
+
+<h2>Output (forkJoin Error)</h2>
+<p>Si l'un des observables ne completent pas, forkJoin ne se résout pas!</p>
+<div>RESPONSE: {{ responseForkJoinError }}</div>
+
+<h2>Output (withLatestFrom)</h2>
+<p>
+  Calcul déclenché dès qu'une valeur est émise, pas de hiérarchie entre les
+  sources.
+</p>
+<div>RESPONSE: {{ responseCombineLatest }}</div>

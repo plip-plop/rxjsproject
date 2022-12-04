@@ -1,0 +1,32 @@
+<h1>Rechercher Marble:</h1>
+<input
+  type="text"
+  [(ngModel)]="inputData"
+  placeholder="taper ici l'opérateur"
+/>
+<button (click)="ajouterMarble()">Ajouter</button>
+<button (click)="resetMarble()">Reset</button>
+<p>Listes préchargées:</p>
+<div>
+  <button (click)="ajouterTimeline()">Timeline</button>
+  <button (click)="ajouterPipeableOperators()">Opérateurs de traitement</button>
+  <button (click)="ajouterExceptions()">Exceptions</button>
+  <button (click)="ajouterCombinationOperators()">Combination operators</button>
+  <button (click)="ajouterHighOrderOperators()">High-Order operators</button>
+  <button (click)="ajouterCreationOperators()">Creation operators</button>
+</div>
+
+<div *ngIf="operateurs.length === 0">
+  <p>Aucun marble affiché.</p>
+  <div><img src="assets/marbles/rxjs_png.png" width="250px" /></div>
+</div>
+<div *ngFor="let operateur of operateurs; index as i">
+  <img src="assets/marbles/{{ operateur.cleUrl }}.png" width="500px" />
+  <p class="text-bold">{{ operateur.signature }}</p>
+  <p>{{ operateur.objectif }}</p>
+  <p>{{ operateur.texte }}</p>
+  <button (click)="retirerMarble(i)">Supprimer</button>
+  <p>
+    -----------------------------------------------------------------------------------------------------------------------
+  </p>
+</div>
